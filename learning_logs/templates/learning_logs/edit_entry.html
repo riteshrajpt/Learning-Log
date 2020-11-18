@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Entry</title>
+</head>
+<body>
+    {% extends "learning_logs/base.html" %}
+    
+    {% block content %}
+
+        <p><a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a></p>
+
+        <p>Edit entry:</p>
+
+        <form action="{% url 'learning_logs:edit_entry' entry.id %}" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button name="submit">save changes</button>
+        </form>
+
+    {% endblock content %}
+</body>
+</html>
