@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
-import django_heroku
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -136,11 +135,9 @@ BOOTSTRAP3 = {
     }
 
 
-# Activate Django-Heroku.
-django_heroku.settings(locals())
 
-"""# Heroku settings
-if os.getcwd() == '/app':
+# Heroku settings
+if os.getcwd() == '/learning_logs':
     import dj_database_url
     DATABASES = {
         'default': dj_database_url.config(default='postgres://localhost')
@@ -158,4 +155,3 @@ if os.getcwd() == '/app':
     STATICFILES_DIRS = (
         os.path.join(BASE_DIR, 'static'),
     )
-    """
