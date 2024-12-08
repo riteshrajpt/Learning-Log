@@ -25,7 +25,9 @@ SECRET_KEY = 'n=-tyn*rtqu_6(wn7w608!aqi!xb)k%s=ljx)#fb_bs(t+7&c2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['*']
+# api/settings.py
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
 
 
 # Application definition
