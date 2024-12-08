@@ -29,7 +29,8 @@ DEBUG = True
 # api/settings.py
 ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
 
-
+# api/settings.py
+WSGI_APPLICATION = 'api.wsgi.app'
 # Application definition
 
 INSTALLED_APPS = [
