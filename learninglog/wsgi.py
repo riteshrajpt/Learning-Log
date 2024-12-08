@@ -14,4 +14,6 @@ from dj_static import Cling
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'learninglog.settings')
 application = Cling(get_wsgi_application())
+# api/wsgi.py
+app = get_wsgi_application()
 
